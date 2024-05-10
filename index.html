@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="md mt-9 bg-black text-white justify-center flex item-center flex-col"> 
+
+        <h1 class="md text-5xl text-center"> Finance App </h1>
+    <div class=" md flex justify-center mt-8 gap-3 text-xl">   
+     
+        <input id="input"
+        class="bg-zinc-200 text-zinc-600 font-mono ring-1 ring-zinc-400 focus:ring-2 focus:ring-rose-400 outline-none duration-300 placeholder:text-zinc-600 placeholder:opacity-50 rounded-full px-4 py-1 shadow-md focus:shadow-lg focus:shadow-rose-400"
+        autocomplete="off"
+        placeholder="add income/expense."
+        name="text"
+        type="number"
+      />
+    </div>
+    <div class=" md flex justify-center mt-6 gap-3">
+        <button onclick="income_btn()" class="cursor-pointer transition-all bg-blue-500 text-white px-6 py-2 rounded-lg
+        border-blue-600
+        border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px]
+        active:border-b-[2px] active:brightness-90 active:translate-y-[2px]">
+         Income
+        </button>
+        <button onclick="expenditure_btn()" class="cursor-pointer transition-all bg-blue-500 text-white px-6 py-2 rounded-lg
+        border-blue-600
+        border-b-[4px] hover:brightness-110 hover:-translate-y-[1px] hover:border-b-[6px]
+        active:border-b-[2px] active:brightness-90 active:translate-y-[2px]">
+         Expenditure
+        </button>
+    </div>
+
+
+<div class="md grid grid-rows-2 grid-flow-col item-center justify-center gap-8 text-xl">
+  <div class="mt-6">
+    <h2>Income</h2> 
+    <div   id="income" class="w-[200px] h-[40px] flex justify-center item-center bg-zinc-200 text-zinc-600 font-mono ring-1 ring-zinc-400 focus:ring-2 focus:ring-rose-400 outline-none duration-300 placeholder:text-zinc-600 placeholder:opacity-50 rounded-full  shadow-md focus:shadow-lg focus:shadow-rose-400">
+    </div>
+  </div>      
+  <div class=" mt-6">
+    <h2>Expenditure</h2>
+    <div   id="expense" class="w-[200px] h-[40px] flex justify-center item-center bg-zinc-200 text-zinc-600 font-mono ring-1 ring-zinc-400 focus:ring-2 focus:ring-rose-400 outline-none duration-300 placeholder:text-zinc-600 placeholder:opacity-50 rounded-full  shadow-md focus:shadow-lg focus:shadow-rose-400">
+     </div>
+  </div>                 
+  <div class="mt-6">
+    <h2>Balance</h2>
+    <div   id="balance" class="w-[200px] h-[40px] flex justify-center item-center bg-zinc-200 text-zinc-600 font-mono ring-1 ring-zinc-400 focus:ring-2 focus:ring-rose-400 outline-none duration-300 placeholder:text-zinc-600 placeholder:opacity-50 rounded-full  shadow-md focus:shadow-lg focus:shadow-rose-400">
+     </div>
+  </div>                 
+  <div class="mt-6">
+  <span>Savings/loss</span>
+    <div   id="savings" class="w-[200px] h-[40px] flex justify-center item-center bg-zinc-200 text-zinc-600 font-mono ring-1 ring-zinc-400 focus:ring-2 focus:ring-rose-400 outline-none duration-300 placeholder:text-zinc-600 placeholder:opacity-50 rounded-full  shadow-md focus:shadow-lg focus:shadow-rose-400">
+     </div>
+  </div>            
+</div>
+          
+
+<div class="mt-6 timeline ">
+  <h2>Transaction History</h2>
+  <table id="transaction-table">
+    <thead >
+      <tr> 
+        <th>Transaction Type</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Balance</th>
+      </tr>
+    </thead>
+    <tbody id="transaction-list">
+      <!-- Transaction rows will be added dynamically here -->
+    </tbody>
+  </table>
+</div>
+  
+
+
+
+
+
+    <script src="script.js"> </script>
+</body>
+</html>
