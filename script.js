@@ -4,6 +4,8 @@ var income_html = document.getElementById("income")
 var expense_html = document.getElementById("expense")
 var balance_html = document.getElementById("balance")
 var savings_loss_html = document.getElementById("savings")
+var summary_html = document.getElementById("summary")
+var summary_body = document.getElementById("summary-body")
 
 var income = 0;
 var expense = 0;
